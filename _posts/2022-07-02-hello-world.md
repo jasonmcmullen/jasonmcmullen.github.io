@@ -36,3 +36,4 @@ and to run it locally for development, before pushing changes to the cloud:
 
 `bundle exec jekyll serve s`
 
+And the rest is magic!
