@@ -12,7 +12,7 @@ tags:
 We're back, with more fun to be had! Today's focus is sorting everything. 
 I've read once that an organized space helps an organized mind, not sure if it's true but I'll take a whack at it.
 
-1. **Hardware:** 
+## **Hardware:** 
 
 So far, my <a href="https://www.dell.com/en-ca/shop/cty/poweredge-2420-rack-enclosure/spd/poweredge-2420">Dell PowerEdge 2420 24U rack</a> is perfect for my needs. Scored a great deal on it when an office in my area was upgrading.
 
@@ -91,20 +91,22 @@ Within this I've built up 2x <a href="https://www.newegg.ca/black-rosewill-rsv-r
   </tbody>
 </table>
 
-2. **Storage:** 
+## **Storage:** 
 
 <a href="https://www.newegg.ca/synology-ds918/p/N82E16822108682">DS918+</a>, this is soon to change, more on this later.
 
-3. **Networking:** 
+## **Networking:** 
 
 Mainly run through my ISP issued HomeHub3000 and routed through various cheap switches around the house, this too is soon to change. As well, I've got a WS-C3560-24PS-S switch, still works but doesn't meet my needs anymore. 
 
-4. **Power:** 
+## **Power:** 
 
  Managed by a <a href="https://www.newegg.ca/startech-rkpw081915-pdu/p/N82E16816129051?Item=9SIA7BB2JK5360">StarTech RKPW081915 Power Distribution Unit(PDU)</a> (surge protected, yuck! I now...) and a separate <a href="https://www.apc.com/ca/en/product/BN1500M2-CA/apc-backups-pro-1500va-120v-avr-lcd-2-usb-charging-ports-10-nema-outlets-4-surge/">APC 1500VA UPS</a> for the system critical stuff.
 **Note**: NEVER plug a PSU into a surge protected PDU, they cancel out protection. There's discussion on the topic but my view is simply don't do it.
 
-## The Plan?
+
+
+## **The Plan?**
 
 Currently I'm using this setup to learn all I can about cloud compute without breaking production environments, spinning up, stressing out and intentionally breaking labs to see how things tick.
 
