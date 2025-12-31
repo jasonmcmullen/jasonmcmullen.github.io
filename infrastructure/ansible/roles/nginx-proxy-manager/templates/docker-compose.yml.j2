@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  db:
+    image: mariadb:10.11
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: {{ npm_env.DB_ROOT_PASSWORD | default('changeme') }}
+      MYSQL_DATABASE: nginxproxymanager
+      MYSQL_USER: npm
+      MYSQL_PASSWORD: {{ npm_env.DB_PASSWORD | default('changeme') }}
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+
+  app:
+    image: jc21/nginx-proxy-manager:latest
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      DB_MYSQL_HOST: db
+      DB_MYSQL_PORT: 3306
+      DB_MYSQL_USER: npm
+      DB_MYSQL_PASSWORD: {{ npm_env.DB_PASSWORD | default('changeme') }}
+      DB_MYSQL_NAME: nginxproxymanager
+    volumes:
+      - ./data/nginx:/etc/nginx
+      - ./data/letsencrypt:/etc/letsencrypt
+      - ./data/html:/usr/share/nginx/html
+    ports:
+      - "80:80"
+      - "81:81"
+      - "443:443"

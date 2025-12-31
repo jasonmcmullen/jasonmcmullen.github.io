@@ -1,0 +1,33 @@
+---
+- name: Create data directory for nginx-proxy-manager
+  file:
+    path: /srv/nginx-proxy-manager
+    state: directory
+    owner: 1000
+    group: 1000
+    mode: "0755"
+
+- name: Copy docker-compose template
+  template:
+    src: docker-compose.yml.j2
+    dest: /srv/nginx-proxy-manager/docker-compose.yml
+    owner: 1000
+    group: 1000
+    mode: "0644"
+
+- name: Ensure .env file (rendered from vars) exists
+  copy:
+    dest: /srv/nginx-proxy-manager/.env
+    content: |
+      {% for k, v in npm_env.items() %}{{ k }}={{ v }}
+      {% endfor %}
+    owner: 1000
+    group: 1000
+    mode: "0600"
+
+- name: Launch nginx-proxy-manager stack
+  community.docker.docker_compose:
+    project_src: /srv/nginx-proxy-manager
+    state: present
+    restarted: true
+  become: true
