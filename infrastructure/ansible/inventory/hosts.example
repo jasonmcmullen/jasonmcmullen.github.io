@@ -1,3 +1,0 @@
-[nginx-proxy]
-# Replace with IP or DNS of the newly provisioned LXC/VM
-npm.example.local ansible_host=192.0.2.10 ansible_user=infrauser
