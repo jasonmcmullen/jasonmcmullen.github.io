@@ -124,8 +124,6 @@ ansible-playbook -i inventory/hosts site.yml --limit vaultwarden
 - Scaffold a `modules/lxc` and a small `envs/test` Terraform root to try one service without affecting production.
 - Build a single Ansible role per app (`roles/vaultwarden`, `roles/nginx-proxy-manager`) so they are reusable and testable locally.
 
-### #KeepItSimple
+## KeepItSimple
 
 This guide is intentionally short — pick one service, write a module + role for it, and repeat the pattern.
-
-```
