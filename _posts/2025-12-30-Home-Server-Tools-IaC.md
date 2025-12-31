@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Home Server Tools & Utilities — IaC Friendly Guide"
 last_modified_at: 2025-12-30T22:50:00-05:00
