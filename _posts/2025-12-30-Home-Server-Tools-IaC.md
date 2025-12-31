@@ -11,8 +11,6 @@ tags:
   - Ansible
 ---
 
-# Home Server Tools & Utilities — IaC Friendly Guide
-
 This short guide summarizes common home-server tools and utilities and gives simple, infrastructure-as-code (IaC) oriented steps to get each one running reproducibly. It draws on the common-service patterns from the TechHut list but is written in original, actionable form so you can follow with Terraform + Ansible patterns.
 
 ## Who?
